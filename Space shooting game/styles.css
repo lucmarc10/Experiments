@@ -1,0 +1,23 @@
+.button {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    background: #222;
+    color: #00ff00;
+    border: 3px solid #00ff00;
+    border-radius: 0; /* Remove rounded corners for a pixel look */
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    bottom: 20px; /* Position button at the bottom */
+    font-family: 'Press Start 2P', cursive; /* Pixel font */
+    box-shadow: 2px 2px 0 #00cc00; /* Add shadow for depth */
+}
+.button:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 2px 2px 5px #00cc00; /* Slightly increase shadow on hover */
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooting Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: black;
+            font-family: 'Press Start 2P', cursive; /* Pixel font */
+        }
+        canvas {
+            border: 1px solid white;
+            position: relative; /* Allow positioning of elements */
+        }
+        .button {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 25px;
+            background: #222;
+            color: #00ff00;
+            border: 3px solid #00ff00;
+            border-radius: 0; /* Remove rounded corners for a pixel look */
+            cursor: pointer;
+            font-size: 18px;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+            bottom: 20px; /* Position button at the bottom */
+            font-family: 'Press Start 2P', cursive; /* Pixel font */
+            box-shadow: 2px 2px 0 #00cc00; /* Add shadow for depth */
+        }
+        .button:hover {
+            background: #00ff00;
+            color: black;
+            box-shadow: 2px 2px 5px #00cc00; /* Slightly increase shadow on hover */
+        }
+        #gameOver {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            bottom: 100px; /* Position game over above the buttons */
+            display: none; /* Initially hidden */
+        }
+        #score {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            top: 20px; /* Position score at the top */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="gameCanvas" width="1000" height="800"></canvas>
+    <div id="score">Score: 0</div> <!-- Score display -->
+    <div id="gameOver">Game Over</div>
+    <button id="startButton" class="button">Start</button>
+    <button id="restartButton" class="button">Restart</button>
+    <script src="script.js"></script>
+</body>
+</html>
